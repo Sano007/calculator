@@ -7,6 +7,7 @@ import sk.daniela.calculator.backend.Tokenization;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 
 public class MainWindow {
 	private JPanel mainPanel;
@@ -166,7 +167,7 @@ public class MainWindow {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if(!display.getText().isEmpty() && !display.getText().isBlank())
-						display.setText(String.format("%f", Calculate.start(Tokenization.getTokens(display.getText()))));
+						display.setText(String.format(Locale.US,"%f", Calculate.start(Tokenization.getTokens(display.getText()))));
 				}
 			});
 		}
