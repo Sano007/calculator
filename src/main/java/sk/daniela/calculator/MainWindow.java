@@ -166,7 +166,7 @@ public class MainWindow {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if(!display.getText().isEmpty() && !display.getText().isBlank())
-						display.setText(new String().formatted(Calculate.start(Tokenization.getTokens(display.getText()))));
+						display.setText(String.format("%f", Calculate.start(Tokenization.getTokens(display.getText()))));
 				}
 			});
 		}
