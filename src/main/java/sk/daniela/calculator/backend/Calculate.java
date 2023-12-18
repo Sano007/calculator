@@ -55,8 +55,8 @@ public class Calculate {
 		if(token.getType() == TokenType.SQRT) {
 			tokens.remove(0);
 			output = Math.sqrt(square(tokens));
-		}
-		output = square(tokens);
+		} else
+			output = square(tokens);
 		
 		return output;
 	}
