@@ -92,7 +92,7 @@ public class Calculate {
 			var numbers = input.split("\\.");
 			var afterDot = number(numbers[1]);
 			
-			for (int i = 0; i < numbers[i].length(); i++)
+			for (int i = 0; i < numbers[1].length(); i++)
 				afterDot /= 10;
 			return number(numbers[0]) + afterDot;
 		}
