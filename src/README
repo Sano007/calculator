@@ -5,7 +5,7 @@
 S = A [(+|-) A]
 A = B [* B]
 B = C [/ C]
-C = D [SQRT D]
+C = [SQRT] D
 D = E [^ E]
 E = [F] N
 F = -
