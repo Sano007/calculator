@@ -1,6 +1,7 @@
 package sk.daniela.calculator;
 
 import com.formdev.flatlaf.FlatLaf;
+import sk.daniela.calculator.backend.Calculate;
 import sk.daniela.calculator.backend.Tokenization;
 
 import javax.swing.*;
@@ -165,7 +166,7 @@ public class MainWindow {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if(!display.getText().isEmpty() && !display.getText().isBlank())
-						Tokenization.getTokens(display.getText());
+						display.setText(new String().formatted(Calculate.start(Tokenization.getTokens(display.getText()))));
 				}
 			});
 		}
