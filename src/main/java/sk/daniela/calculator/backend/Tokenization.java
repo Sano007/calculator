@@ -52,6 +52,16 @@ public class Tokenization {
 					}
 					tokens.add(new Token(TokenType.MULTIPLY, "*"));
 					break;
+				case '^':
+					if(lastCharacter != LastState.NULL){
+						tokens.add(new Token((lastCharacter == LastState.DIGIT) ?
+								TokenType.NUMBER : TokenType.SQRT,
+								value));
+						value = "";
+						lastCharacter = LastState.NULL;
+					}
+					tokens.add(new Token(TokenType.SQUARE, "*"));
+					break;
 				case '/':
 					if(lastCharacter != LastState.NULL){
 						tokens.add(new Token((lastCharacter == LastState.DIGIT) ?
